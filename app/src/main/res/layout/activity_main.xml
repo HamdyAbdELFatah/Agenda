@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity"
+        android:padding="10dp"
+        android:orientation="vertical">
+
+
+    <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/editText"
+            android:drawableLeft="@drawable/ic_musica_searcher"
+            android:drawablePadding="10dp"
+            android:hint="Enter a Book Title"
+            android:layout_marginBottom="10dp"
+            android:textSize="24sp"/>
+    <Button
+            android:text="@android:string/search_go"
+            android:layout_width="match_parent"
+            android:background="@drawable/button"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:layout_marginBottom="10dp"
+            android:id="@+id/button"/>
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <ImageView android:layout_width="match_parent"
+                   android:layout_height="match_parent"
+                   android:id="@+id/notebook"
+                   android:layout_margin="50dp"
+                   android:alpha=".7"
+                   android:layout_centerInParent="true"
+                   app:srcCompat="@drawable/ic_notebook"
+                   tools:ignore="VectorDrawableCompat"/>
+        <ProgressBar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/progressBar"
+                android:visibility="invisible"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:layout_centerInParent="true"
+                android:indeterminate="true"/>
+        <ListView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentBottom="false"
+                android:id="@+id/listview"
+                android:divider="@color/colorAccent"
+                android:dividerHeight="2dp"
+                tools:listitem="@layout/list_items"
+                android:layout_alignParentStart="true">
+        </ListView>
+    </RelativeLayout>
+</LinearLayout>
